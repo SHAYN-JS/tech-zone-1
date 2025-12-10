@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahsulot - TechZone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-simple.css">
+</head>
+<body>
+
+    <!-- Minimal header -->
+    <header class="simple-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">TechZone</a>
+                <a href="cart.html" class="cart-icon">
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Faqat savatga qoʻshish sahifasi -->
+    <section class="product-simple-page">
+        <div class="container">
+            <div class="product-simple-card">
+
+                <img src="" alt="Mahsulot" class="product-img" id="productImg">
+
+                <h1 class="product-title" id="productTitle">Mahsulot nomi</h1>
+
+                <div class="price-info">
+                    <div class="price-old" id="oldPrice"></div>
+                    <div class="price-current" id="currentPrice"></div>
+                    <div class="discount-badge" id="discountBadge"></div>
+                </div>
+
+                <div class="quantity-selector">
+                    <button class="qty-btn minus" onclick="changeQty(-1)">−</button>
+                    <input type="number" id="quantity" value="1" min="1" readonly>
+                    <button class="qty-btn plus" onclick="changeQty(1)">+</button>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-add-to-cart" onclick="addToCartAndNotify()">
+                        Savatga qo'shish
+                    </button>
+                    <button class="btn-buy-now" onclick="buyNow()">
+                        Xozir sotib olish
+                    </button>
+                </div>
+
+                <a href="javascript:history.back()" class="back-link">
+                    Orqaga
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skriptlar -->
+    <script src="js/main.js"></script>
+    <script src="js/productdetail.js"></script>
+    <script src="js/toast.js"></script>
+
+    <!-- Toast -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script>
+        // Miqdor o'zgartirish
+        function changeQty(val) {
+            const input = document.getElementById('quantity');
+            let qty = parseInt(input.value);
+            qty += val;
+            if (qty < 1) qty = 1;
+            input.value = qty;
+        }
+
+        // Savatga qo'shish
+        function addToCartAndNotify() {
+            const qty = parseInt(document.getElementById('quantity').value);
+            for (let i = 0; i < qty; i++) {
+                app.addToCart(window.currentProductDetail);
+            }
+            showToast(`"${window.currentProductDetail.name}" savatga qo'shildi!`, 'success');
+        }
+
+        // Xozir sotib olish
+        function buyNow() {
+            addToCartAndNotify();
+            setTimeout(() => location.href = 'cart.html', 800);
+        }
+    </script>
+</body>
+</html>

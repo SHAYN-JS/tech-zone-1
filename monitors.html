@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitorlar | TechZone Katalog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        .catalog-layout {
+            display: flex;
+            padding: 30px 0;
+        }
+        .sidebar {
+            width: 25%;
+            padding-right: 20px;
+        }
+        .product-list {
+            width: 75%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        /* Filterlar uchun asosiy stil */
+        .filter-group {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .filter-group h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .filter-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">TechZone</a>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Mahsulotlarni qidirish..." id="searchInput">
+                </div>
+                
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <button class="lang-btn active">UZ</button>
+                        <button class="lang-btn">RU</button>
+                        <button class="lang-btn">EN</button>
+                    </div>
+                    
+                    <a href="cart.html" class="cart-icon">
+                        🛒
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    
+                    <div id="authButtons" class="auth-buttons">
+                        <a href="login.html" class="btn">Kirish</a>
+                        <a href="register.html" class="btn">Ro'yxatdan o'tish</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="categories-nav">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="laptops.html">Noutbuklar</a></li>
+                <li><a href="desktops.html">Kompyuterlar</a></li>
+                <li><a href="monitors.html" class="active">Monitorlar</a></li> 
+                <li><a href="gpu.html">Videokartalar</a></li>
+                <li><a href="products.html">Barcha mahsulotlar</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="page-title-section">
+        <div class="container">
+            <h1>Monitorlar</h1>
+            <p>Gaming, ofis va professional ishlar uchun turli o'lchamdagi va texnologiyali monitorlar.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="catalog-layout">
+            
+            <aside class="sidebar">
+                <h3><i class="fas fa-filter"></i> Filterlar</h3>
+                
+                <div class="filter-group">
+                    <h4>Diagonal (dyuym)</h4>
+                    <label><input type="checkbox" name="size" value="24"> 24"</label>
+                    <label><input type="checkbox" name="size" value="27"> 27"</label>
+                    <label><input type="checkbox" name="size" value="32"> 32"</label>
+                    <label><input type="checkbox" name="size" value="other"> 34" va katta</label>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Yangilanish chastotasi (Hz)</h4>
+                    <label><input type="checkbox" name="refresh" value="60"> 60/75 Hz</label>
+                    <label><input type="checkbox" name="refresh" value="144"> 144 Hz</label>
+                    <label><input type="checkbox" name="refresh" value="240"> 240 Hz va yuqori</label>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Panel turi</h4>
+                    <select name="panel_type">
+                        <option value="">Barchasi</option>
+                        <option value="ips">IPS</option>
+                        <option value="va">VA</option>
+                        <option value="oled">OLED</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Ruxsat (Resolution)</h4>
+                    <select name="resolution">
+                        <option value="">Barchasi</option>
+                        <option value="fhd">Full HD (1920x1080)</option>
+                        <option value="qhd">QHD (2560x1440)</option>
+                        <option value="4k">4K (3840x2160)</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-primary" style="width: 100%;">Filterlash</button>
+            </aside>
+
+            <section class="product-list-container">
+                <div class="sort-options" style="margin-bottom: 20px;">
+                    <label for="sort"><i class="fas fa-sort"></i> Tartiblash:</label>
+                    <select id="sort">
+                        <option value="popular">Mashhurlikka ko'ra</option>
+                        <option value="price_asc">Narxi (O'sish)</option>
+                        <option value="price_desc">Narxi (Kamayish)</option>
+                        <option value="new">Yangi</option>
+                    </select>
+                </div>
+
+                <div class="products-grid product-list" id="monitorProducts">
+                    
+                    <div class="product-card">
+                        <img src="./images/samsung.jfif" alt="Samsung Monitor" class="product-image">
+                        <h4 class="product-title">Samsung Odyssey G5 (27")</h4>
+                        <p class="product-specs">27" | QHD | 144Hz | Kauchuk (Curved)</p>
+                        <p class="product-price">4 800 000 so'm</p>
+                        <button class="btn btn-primary add-to-cart">Savatga qo'shish</button>
+                        <a href="product-detail.html" class="btn btn-secondary quick-view">Batafsil</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="./images/imageeeee.jfif" alt="Dell Monitor" class="product-image">
+                        <h4 class="product-title">Dell UltraSharp U2422H</h4>
+                        <p class="product-specs">24" | FHD | 60Hz | IPS | Professional</p>
+                        <p class="product-price">3 100 000 so'm</p>
+                        <button class="btn btn-primary add-to-cart">Savatga qo'shish</button>
+                        <a href="product-detail.html" class="btn btn-secondary quick-view">Batafsil</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="images/yangi.jfif" alt="LG 4K Monitor" class="product-image">
+                        <h4 class="product-title">LG UltraFine 32UL750-W</h4>
+                        <p class="product-specs">32" | 4K | 60Hz | HDR | USB-C</p>
+                        <p class="product-price">9 500 000 so'm</p>
+                        <button class="btn btn-primary add-to-cart">Savatga qo'shish</button>
+                        <a href="product-detail.html" class="btn btn-secondary quick-view">Batafsil</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="images/yanig2.jfif" alt="Budget Monitor" class="product-image">
+                        <h4 class="product-title">HP M24fwa (Oq)</h4>
+                        <p class="product-specs">24" | FHD | 75Hz | IPS | Oq korpus</p>
+                        <p class="product-price">2 100 000 so'm</p>
+                        <button class="btn btn-primary add-to-cart">Savatga qo'shish</button>
+                        <a href="product-detail.html" class="btn btn-secondary quick-view">Batafsil</a>
+                    </div>
+                    
+                    </div>
+                
+                <div class="pagination-controls" style="text-align: center; margin-top: 30px;">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">Keyingi &raquo;</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>TechZone</h3>
+                    <p>Eng yangi va eng sifatli texnologiya mahsulotlari faqat bizda. O'zingizga mos kompyuter tizimini yig'ing!</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100076328040599&locale=ru_RU" class="social-icon">📘</a>
+                        <a href="https://www.instagram.com/shayn_top/" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">✈️</a>
+                        <a href="#" class="social-icon">📱</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Kategoriyalar</h3>
+                    <ul class="footer-links">
+                        <li><a href="laptops.html">Noutbuklar</a></li>
+                        <li><a href="desktops.html">Sistem bloklar</a></li>
+                        <li><a href="monitors.html">Monitorlar</a></li>
+                        <li><a href="gpu.html">Videokartalar</a></li>
+                        <li><a href="storage.html">SSD va HDD</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Foydali havolalar</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Biz haqimizda</a></li>
+                        <li><a href="delivery.html">Yetkazib berish</a></li>
+                        <li><a href="payment.html">To'lov usullari</a></li>
+                        <li><a href="credit.html">Kredit</a></li>
+                        <li><a href="warranty.html">Kafolat</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Aloqa</h3>
+                    <ul class="footer-links">
+                        <li>📍 Toshkent sh., Yunusobod tumani</li>
+                        <li>📞 +998 90 123 45 67</li>
+                        <li>✉️ info@techzone.uz</li>
+                        <li>🕒 Dushanba - Yakshanba: 9:00 - 20:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 TechZone. Barcha huquqlar himoyalangan.
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <div class="toast-container" id="toastContainer"></div>
+</body>
+</html>

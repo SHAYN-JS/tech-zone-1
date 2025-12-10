@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Kirish - TechZone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">TechZone</a>
+                <div class="header-actions">
+                    <a href="register.html" class="btn">Ro'yxatdan o'tish</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="auth-page">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <h1>Hisobga kirish</h1>
+                    <p>TechZone dagi xaridlaringizni boshqaring</p>
+                </div>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email yoki Telefon</label>
+                        <input type="text" id="email" name="email" required placeholder="example@gmail.com yoki +998XXYYYYZZ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Parol</label>
+                        <input type="password" id="password" name="password" required placeholder="Parolingizni kiriting">
+                    </div>
+                    
+                    <div class="forgot-password">
+                        <a href="#">Parolni unutdingizmi?</a>
+                    </div>
+
+                    <button type="submit" class="auth-btn btn btn-accent">Kirish</button>
+                </form>
+
+                <div class="social-auth">
+                    <div class="social-divider">
+                        <span>Yoki ijtimoiy tarmoqlar orqali</span>
+                    </div>
+                    <div class="social-buttons">
+
+                        <!-- FACEBOOK BUTTON -->
+                        <button type="button" class="social-btn">
+                            <i class="fa-brands fa-facebook"></i>
+                            Facebook
+                        </button>
+
+                        <!-- INSTAGRAM BUTTON -->
+                        <button type="button" class="social-btn">
+                            <i class="fa-brands fa-instagram"></i>
+                            Instagram
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="auth-footer">
+                    Hisobingiz yo'qmi?
+                    <a href="register.html">Ro'yxatdan o'tish</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script> 
+    <script src="js/auth.js"></script> 
+    <div class="toast-container" id="toastContainer"></div>
+</body>
+</html>

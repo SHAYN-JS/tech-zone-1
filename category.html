@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noutbuklar - TechZone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Header kodlari -->
+    </header>
+
+    <section class="category-page">
+        <div class="container">
+            <div class="category-content">
+                <!-- Filtrlar paneli -->
+                <aside class="filters-sidebar">
+                    <h3>Filtrlar</h3>
+                    
+                    <!-- Narx diapazoni -->
+                    <div class="filter-group">
+                        <h4>Narx diapazoni</h4>
+                        <div class="price-range">
+                            <input type="range" min="0" max="50000000" value="25000000" class="price-slider">
+                            <div class="price-values">
+                                <span>0 so'm</span>
+                                <span>50,000,000 so'm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brendlar -->
+                    <div class="filter-group">
+                        <h4>Brendlar</h4>
+                        <div class="brand-filters">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="brand" value="asus">
+                                <span>ASUS</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="brand" value="msi">
+                                <span>MSI</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="brand" value="lenovo">
+                                <span>Lenovo</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="brand" value="hp">
+                                <span>HP</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="brand" value="dell">
+                                <span>Dell</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Protsessor -->
+                    <div class="filter-group">
+                        <h4>Protsessor</h4>
+                        <div class="processor-filters">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="processor" value="i5">
+                                <span>Intel Core i5</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="processor" value="i7">
+                                <span>Intel Core i7</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="processor" value="i9">
+                                <span>Intel Core i9</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="processor" value="ryzen5">
+                                <span>AMD Ryzen 5</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="processor" value="ryzen7">
+                                <span>AMD Ryzen 7</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Videokarta -->
+                    <div class="filter-group">
+                        <h4>Videokarta</h4>
+                        <div class="gpu-filters">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="gpu" value="rtx3060">
+                                <span>RTX 3060</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="gpu" value="rtx4060">
+                                <span>RTX 4060</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="gpu" value="rtx4070">
+                                <span>RTX 4070</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- RAM -->
+                    <div class="filter-group">
+                        <h4>RAM</h4>
+                        <div class="ram-filters">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="ram" value="8">
+                                <span>8GB</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="ram" value="16">
+                                <span>16GB</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="ram" value="32">
+                                <span>32GB</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn apply-filters">Filtrlarni qo'llash</button>
+                    <button class="btn reset-filters">Filtrlarni tozalash</button>
+                </aside>
+
+                <!-- Mahsulotlar -->
+                <main class="products-main">
+                    <div class="products-header">
+                        <h1>Noutbuklar</h1>
+                        <div class="sort-options">
+                            <select class="sort-select">
+                                <option value="popular">Mashhurligi bo'yicha</option>
+                                <option value="price-low">Arzondan qimmatga</option>
+                                <option value="price-high">Qimmatdan arzonga</option>
+                                <option value="new">Yangi mahsulotlar</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="category-products">
+                        <!-- Mahsulotlar JavaScript orqali yuklanadi -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <span>...</span>
+                        <button class="page-btn">10</button>
+                        <button class="page-btn next">Keyingi</button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Footer kodlari -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/category.js"></script>
+    <!-- Toast Notification Container -->
+<div class="toast-container" id="toastContainer"></div>
+</body>
+</html>

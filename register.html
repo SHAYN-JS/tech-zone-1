@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ro'yxatdan o'tish - TechZone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">TechZone</a>
+                <div class="header-actions">
+                    <a href="login.html" class="btn">Kirish</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Register Section -->
+    <section class="auth-page">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <h1>Hisob yarating</h1>
+                    <p>TechZone jamoasiga qo'shiling</p>
+                </div>
+
+                <form id="registerForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Ism</label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="Ismingiz">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Familiya</label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="Familiyangiz">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email manzil</label>
+                        <input type="email" id="email" name="email" required placeholder="email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefon raqam</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+998 XX XXX XX XX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Parol</label>
+                        <input type="password" id="password" name="password" required placeholder="Kamida 8 ta belgi">
+                        <div class="password-strength" id="passwordStrength">
+                            <div class="strength-bar">
+                                <div class="strength-bar-fill"></div>
+                            </div>
+                            <span class="strength-text"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Parolni tasdiqlang</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Parolni qayta kiriting">
+                    </div>
+
+                    <div class="terms-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            Men <a href="terms.html">foydalanish shartlari</a> va 
+                            <a href="privacy.html">maxfiylik siyosati</a> bilan tanishdim va roziman
+                        </label>
+                    </div>
+
+                    <div class="terms-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">
+                            Yangiliklar va aksiyalar haqida xabarlarni email orqali olishni xohlayman
+                        </label>
+                    </div>
+
+                    <button type="submit" class="auth-btn">Ro'yxatdan o'tish</button>
+                </form>
+
+                <div class="social-auth">
+                    <div class="social-divider">
+                        <span>Yoki ijtimoiy tarmoqlar orqali</span>
+                    </div>
+                    <div class="social-buttons">
+                        <button type="button" class="social-btn">
+                            <span>📘</span> Facebook
+                        </button>
+                        <button type="button" class="social-btn">
+                            <span>📷</span> Instagram
+                        </button>
+                    </div>
+                </div>
+
+                <div class="auth-footer">
+                    Allaqachon hisobingiz bormi?
+                    <a href="login.html">Kirish</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/auth.js"></script>
+    <!-- Toast Notification Container -->
+<div class="toast-container" id="toastContainer"></div>
+</body>
+</html>

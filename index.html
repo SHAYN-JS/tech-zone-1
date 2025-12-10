@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone | Texnologiya do'koni</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">TechZone</a>
+                
+                <div class="search-bar">
+                    <input type="text" data-i18n="search_placeholder" placeholder="Mahsulotlarni qidirish..." id="searchInput">
+                </div>
+                
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <button class="lang-btn active" data-lang="UZ">UZ</button>
+                        <button class="lang-btn" data-lang="RU">RU</button>
+                        <button class="lang-btn" data-lang="EN">EN</button>
+                    </div>
+                    
+                    <a href="cart.html" class="cart-icon">
+                        🛒
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    
+                    <div id="authButtons" class="auth-buttons">
+                        <a href="login.html" class="btn" data-i18n="login_btn">Kirish</a>
+                        <a href="register.html" class="btn" data-i18n="register_btn">Ro'yxatdan o'tish</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="categories-nav">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="laptops.html" data-i18n="cat_laptops">Noutbuklar</a></li>
+                <li><a href="desktops.html" data-i18n="cat_desktops">Kompyuterlar</a></li>
+                <li><a href="monitors.html" data-i18n="cat_monitors">Monitorlar</a></li>
+                <li><a href="gpu.html" data-i18n="cat_gpu">Videokartalar</a></li>
+                <li><a href="storage.html" data-i18n="cat_storage">SSD va HDD</a></li>
+                <li><a href="products.html" data-i18n="cat_all">Barcha mahsulotlar</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="main-content">
+        <div class="container">
+
+            <section class="hero-section" style="margin-bottom: 40px;">
+                <img src="images/main_banner.jpg" alt="Asosiy Aksiya Banneri" style="width: 100%; border-radius: 10px;">
+            </section>
+            
+            <section class="products-section" id="specialOffersSection">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="offers_title">🔥 Maxsus aksiyalar</h2>
+                    <div class="discount-timer" id="discountTimer" data-i18n="timer_text_placeholder">Aksiya tugashiga: 02:15:30</div> 
+                </div>
+                
+                <div class="products-grid" id="discountProducts">
+                    
+                    <div class="product-card">
+                        <img src="images/aksiya_laptop.jpg" alt="Aksiyadagi Noutbuk" class="product-image">
+                        <h4 class="product-title">Acer Predator Helios 300</h4>
+                        <p class="product-specs">i7 | 16GB | RTX 3060</p>
+                        <p class="product-price"><del style="color: var(--text-secondary);">15 000 000 so'm</del> <span style="color: var(--accent); font-weight: bold;">12 500 000 so'm</span></p>
+                        <button class="btn btn-primary add-to-cart" data-i18n="add_to_cart_btn">Savatga qo'shish</button>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="images/aksiya_monitor.jpg" alt="Aksiyadagi Monitor" class="product-image">
+                        <h4 class="product-title">Samsung Odyssey G7</h4>
+                        <p class="product-specs">32" | 240Hz | QHD</p>
+                        <p class="product-price"><del style="color: var(--text-secondary);">7 000 000 so'm</del> <span style="color: var(--accent); font-weight: bold;">5 800 000 so'm</span></p>
+                        <button class="btn btn-primary add-to-cart" data-i18n="add_to_cart_btn">Savatga qo'shish</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/aksiya_gpu.jpg" alt="Aksiyadagi Videokarta" class="product-image">
+                        <h4 class="product-title">RTX 4070 Founders Edition</h4>
+                        <p class="product-specs">12GB VRAM | NVIDIA</p>
+                        <p class="product-price"><del style="color: var(--text-secondary);">11 500 000 so'm</del> <span style="color: var(--accent); font-weight: bold;">9 999 000 so'm</span></p>
+                        <button class="btn btn-primary add-to-cart" data-i18n="add_to_cart_btn">Savatga qo'shish</button>
+                    </div>
+
+                </div>
+                <a href="products.html?filter=discount" class="btn btn-secondary load-more" style="margin-top: 20px;" data-i18n="view_offers_btn">Barcha aksiyalarni ko'rish</a>
+            </section>
+
+            <hr style="border-color: var(--border); margin: 40px 0;">
+
+            <section class="products-section" id="bestSellersSection">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="bestsellers_title">⭐ Eng ko'p sotilayotganlar</h2>
+                </div>
+                
+                <div class="products-grid" id="bestSellingProducts">
+                    
+                    <div class="product-card">
+                        <img src="images/bestseller_desktop.jpg" alt="Gaming Kompyuter" class="product-image">
+                        <h4 class="product-title">Gaming PC "Mid-Range"</h4>
+                        <p class="product-specs">i5-13400F | 16GB | RTX 4060</p>
+                        <p class="product-price"><span style="color: var(--accent); font-weight: bold;">11 000 000 so'm</span></p>
+                        <button class="btn btn-primary add-to-cart" data-i18n="add_to_cart_btn">Savatga qo'shish</button>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="images/bestseller_ssd.jpg" alt="SSD" class="product-image">
+                        <h4 class="product-title">Samsung 980 Pro SSD 1TB</h4>
+                        <p class="product-specs">1TB | NVMe | Yuqori tezlik</p>
+                        <p class="product-price"><span style="color: var(--accent); font-weight: bold;">1 600 000 so'm</span></p>
+                        <button class="btn btn-primary add-to-cart" data-i18n="add_to_cart_btn">Savatga qo'shish</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/bestseller_headphone.jpg" alt="Quloqchin" class="product-image">
+                        <h4 class="product-title">Logitech G Pro X Quloqchin</h4>
+                        <p class="product-specs">Simli | Gaming | DTS Headphone:X 2.0</p>
+                        <p class="product-price"><span style="color: var(--accent); font-weight: bold;">850 000 so'm</span></p>
+                        <button class="btn btn-primary add-to-cart" data-i18n="add_to_cart_btn">Savatga qo'shish</button>
+                    </div>
+
+                </div>
+                <a href="products.html?sort=popular" class="btn btn-secondary load-more" style="margin-top: 20px;" data-i18n="view_bestsellers_btn">Barcha bestsellerlarni ko'rish</a>
+            </section>
+            
+            <hr style="border-color: var(--border); margin: 40px 0;">
+
+            <section class="products-section" id="newArrivalsSection">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="new_arrivals_title">✨ Eng so'nggi texnologiyalar</h2>
+                </div>
+                
+                <div class="products-grid" id="newArrivalsProducts">
+                    
+                    <div class="product-card">
+                        <img src="images/new_product_1.jpg" alt="Mini PC" class="product-image">
+                        <h4 class="product-title">Intel NUC 13 Pro Mini PC</h4>
+                        <p class="product-specs">i7 | 32GB RAM | 1TB SSD | Minimal o'lcham</p>
+                        <p class="product-price"><span style="color: var(--accent); font-weight: bold;">9 500 000 so'm</span></p>
+                        <button class="btn btn-primary add-to-cart" data-i18n="add_to_cart_btn">Savatga qo'shish</button>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="images/new_product_2.jpg" alt="Gaming Klaviatura" class="product-image">
+                        <h4 class="product-title">Razer Huntsman V3 Pro Klaviatura</h4>
+                        <p class="product-specs">Analog Optik Switchlar | 8K Polling</p>
+                        <p class="product-price"><span style="color: var(--accent); font-weight: bold;">2 400 000 so'm</span></p>
+                        <button class="btn btn-primary add-to-cart" data-i18n="add_to_cart_btn">Savatga qo'shish</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/new_product_3.jpg" alt="Webcam" class="product-image">
+                        <h4 class="product-title">Logitech Brio Stream 4K</h4>
+                        <p class="product-specs">4K Ultra HD | HDR | Stream uchun</p>
+                        <p class="product-price"><span style="color: var(--accent); font-weight: bold;">1 900 000 so'm</span></p>
+                        <button class="btn btn-primary add-to-cart" data-i18n="add_to_cart_btn">Savatga qo'shish</button>
+                    </div>
+
+                </div>
+                <a href="products.html?sort=new" class="btn btn-secondary load-more" style="margin-top: 20px;" data-i18n="view_new_btn">Barcha yangi mahsulotlarni ko'rish</a>
+            </section>
+
+            <hr style="border-color: var(--border); margin: 40px 0;">
+            
+            <section class="categories-section">
+                <h2 class="section-title" data-i18n="categories_title">Kategoriyalar</h2>
+                <div class="categories-grid">
+                    
+                    <a href="laptops.html" class="category-card">
+                        <img src="images/category_laptops.jpg" alt="Noutbuklar Rasmi" class="category-image">
+                        <h3 data-i18n="cat_laptops">Noutbuklar</h3>
+                    </a>
+                    
+                    <a href="desktops.html" class="category-card">
+                        <img src="images/category_desktops.jpg" alt="Sistem Bloklar Rasmi" class="category-image">
+                        <h3 data-i18n="cat_desktops">Sistem bloklar</h3>
+                    </a>
+
+                    <a href="monitors.html" class="category-card">
+                        <img src="images/category_monitors.jpg" alt="Monitorlar Rasmi" class="category-image">
+                        <h3 data-i18n="cat_monitors">Monitorlar</h3>
+                    </a>
+                    
+                    <a href="gpu.html" class="category-card">
+                        <img src="images/category_gpu.jpg" alt="Videokartalar Rasmi" class="category-image">
+                        <h3 data-i18n="cat_gpu">Videokartalar</h3>
+                    </a>
+                    
+                    <a href="storage.html" class="category-card">
+                        <img src="images/category_storage.jpg" alt="SSD va HDD Rasmi" class="category-image">
+                        <h3 data-i18n="cat_storage">SSD va HDD</h3>
+                    </a>
+
+                </div>
+            </section>
+            
+            <hr style="border-color: var(--border); margin: 40px 0;">
+
+            <section class="brands-section">
+                <h2 class="section-title" data-i18n="brands_title">Hamkor brendlar</h2>
+                <div class="brands-grid">
+                    
+                    <a href="products.html?brand=asus" class="brand-item">
+                         <img src="images/logo_asus.png" alt="ASUS Logo" class="brand-logo">
+                    </a>
+                    
+                    <a href="products.html?brand=dell" class="brand-item">
+                         <img src="images/logo_dell.png" alt="DELL Logo" class="brand-logo">
+                    </a>
+
+                    <a href="products.html?brand=hp" class="brand-item">
+                         <img src="images/logo_hp.png" alt="HP Logo" class="brand-logo">
+                    </a>
+
+                    <a href="products.html?brand=samsung" class="brand-item">
+                         <img src="images/logo_samsung.png" alt="SAMSUNG Logo" class="brand-logo">
+                    </a>
+                    
+                    <a href="products.html?brand=lenovo" class="brand-item">
+                         <img src="images/logo_lenovo.png" alt="LENOVO Logo" class="brand-logo">
+                    </a>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>TechZone</h3>
+                    <p data-i18n="footer_slogan">Eng yangi va eng sifatli texnologiya mahsulotlari faqat bizda. O'zingizga mos kompyuter tizimini yig'ing!</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100076328040599&locale=ru_RU" class="social-icon">📘</a>
+                        <a href="https://www.instagram.com/shayn_top/" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">✈️</a>
+                        <a href="#" class="social-icon">📱</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-i18n="footer_categories_title">Kategoriyalar</h3>
+                    <ul class="footer-links">
+                        <li><a href="laptops.html" data-i18n="cat_laptops">Noutbuklar</a></li>
+                        <li><a href="desktops.html" data-i18n="cat_desktops">Sistem bloklar</a></li>
+                        <li><a href="monitors.html" data-i18n="cat_monitors">Monitorlar</a></li>
+                        <li><a href="gpu.html" data-i18n="cat_gpu">Videokartalar</a></li>
+                        <li><a href="storage.html" data-i18n="cat_storage">SSD va HDD</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-i18n="footer_links_title">Foydali havolalar</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="footer_about">Biz haqimizda</a></li>
+                        <li><a href="delivery.html" data-i18n="footer_delivery">Yetkazib berish</a></li>
+                        <li><a href="payment.html" data-i18n="footer_payment">To'lov usullari</a></li>
+                        <li><a href="credit.html" data-i18n="footer_credit">Kredit</a></li>
+                        <li><a href="warranty.html" data-i18n="footer_warranty">Kafolat</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-i18n="footer_contact_title">Aloqa</h3>
+                    <ul class="footer-links">
+                        <li>📍 Toshkent sh., Yunusobod tumani</li>
+                        <li>📞 +998 90 123 45 67</li>
+                        <li>✉️ info@techzone.uz</li>
+                        <li data-i18n="footer_hours">🕒 Dushanba - Yakshanba: 9:00 - 20:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright" data-i18n="footer_copyright">
+                &copy; 2025 TechZone. Barcha huquqlar himoyalangan.
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <div class="toast-container" id="toastContainer"></div>
+</body>
+</html>

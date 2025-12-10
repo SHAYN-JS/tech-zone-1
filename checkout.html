@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyurtmani rasmiylashtirish - TechZone</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    </head>
+<body class="bg-gray-50">
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">TechZone</a>
+                </div>
+        </div>
+    </header>
+
+    <section class="py-10 lg:py-16">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <h1 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-8">
+                🛒 Buyurtmani rasmiylashtirish
+            </h1>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-lg">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-3">1. Yetkazib berish manzili</h2>
+                    
+                    <form id="checkoutForm">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Ism</label>
+                                <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-indigo-500 focus:border-indigo-500">
+                            </div>
+                            <div>
+                                <label for="surname" class="block text-sm font-medium text-gray-700">Familiya</label>
+                                <input type="text" id="surname" name="surname" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-indigo-500 focus:border-indigo-500">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Telefon raqami</label>
+                                <input type="tel" id="phone" name="phone" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-indigo-500 focus:border-indigo-500" placeholder="+998 XX YYY YY YY">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email (Majburiy emas)</label>
+                                <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-indigo-500 focus:border-indigo-500">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="address" class="block text-sm font-medium text-gray-700">To'liq manzil (Viloyat, shahar, ko'cha, uy raqami)</label>
+                            <textarea id="address" name="address" rows="3" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b pb-3 mt-8">2. To'lov usuli</h2>
+                        
+                        <div class="space-y-4 mb-6">
+                            <label class="flex items-center border border-gray-300 p-4 rounded-md cursor-pointer hover:bg-indigo-50 transition duration-150">
+                                <input type="radio" name="paymentMethod" value="cash" required class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500">
+                                <span class="ml-3 text-base font-medium text-gray-700">Naqd pulda (kurerga)</span>
+                            </label>
+                            <label class="flex items-center border border-gray-300 p-4 rounded-md cursor-pointer hover:bg-indigo-50 transition duration-150">
+                                <input type="radio" name="paymentMethod" value="card_online" required class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500">
+                                <span class="ml-3 text-base font-medium text-gray-700">Plastik karta orqali onlayn (Click, Payme)</span>
+                            </label>
+                            <label class="flex items-center border border-gray-300 p-4 rounded-md cursor-pointer hover:bg-indigo-50 transition duration-150">
+                                <input type="radio" name="paymentMethod" value="credit" required class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500">
+                                <span class="ml-3 text-base font-medium text-gray-700">Muddatli to'lov (Kredit)</span>
+                            </label>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="comment" class="block text-sm font-medium text-gray-700">Buyurtmaga izoh</label>
+                            <textarea id="comment" name="comment" rows="2" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Kurerga qo'shimcha ma'lumotlar..."></textarea>
+                        </div>
+                        
+                        <div class="flex items-center mb-6">
+                            <input id="terms" name="terms" type="checkbox" required class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+                            <label for="terms" class="ml-2 block text-sm text-gray-900">
+                                Men <a href="warranty.html" class="text-indigo-600 hover:text-indigo-800">xizmat ko'rsatish shartlari</a>ga roziman
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300">
+                            Buyurtmani tasdiqlash
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg h-fit sticky top-4">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b pb-3">Buyurtma xulosasi</h2>
+                    
+                    <div id="checkoutSummaryList" class="space-y-4 mb-6">
+                        <div class="flex justify-between text-sm text-gray-600 border-b pb-2">
+                            <span>Noutbuk ASUS (x1)</span>
+                            <span>9 500 000 so'm</span>
+                        </div>
+                        </div>
+                    
+                    <div class="space-y-2 mb-4">
+                        <div class="flex justify-between text-gray-700">
+                            <span>Mahsulotlar narxi:</span>
+                            <span id="subtotal">15 500 000 so'm</span>
+                        </div>
+                        <div class="flex justify-between text-gray-700">
+                            <span>Yetkazib berish:</span>
+                            <span id="deliveryCost">Bepul</span>
+                        </div>
+                        <div class="flex justify-between text-lg font-semibold text-gray-900 pt-2 border-t mt-4">
+                            <span>Jami to'lov:</span>
+                            <span id="totalAmount">15 500 000 so'm</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+    <div class="toast-container" id="toastContainer"></div>
+</body>
+</html>

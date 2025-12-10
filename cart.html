@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savat - TechZone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">TechZone</a>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Mahsulotlarni qidirish..." id="searchInput">
+                </div>
+                
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <button class="lang-btn active">UZ</button>
+                        <button class="lang-btn">RU</button>
+                        <button class="lang-btn">EN</button>
+                    </div>
+                    
+                    <a href="cart.html" class="cart-icon">
+                        🛒
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    
+                    <div class="auth-buttons">
+                        <a href="login.html" class="btn">Kirish</a>
+                        <a href="register.html" class="btn">Ro'yxatdan o'tish</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="cart-page">
+        <div class="container">
+            <h1 class="page-title">Savatcha</h1>
+            
+            <div class="cart-content">
+                <div class="cart-items" id="cartItemsContainer">
+                    </div>
+
+                <div class="cart-summary">
+                    <h2>Savat xulosasi</h2>
+                    <div class="summary-line">
+                        <span>Mahsulotlar narxi:</span>
+                        <span id="subtotal">0 so'm</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Yetkazib berish:</span>
+                        <span id="deliveryCost">0 so'm</span>
+                    </div>
+                    <div class="summary-separator"></div>
+                    <div class="summary-line total">
+                        <span>Jami:</span>
+                        <span id="totalPrice">0 so'm</span>
+                    </div>
+                    
+                    <button class="btn btn-checkout" onclick="cartManager.proceedToCheckout()">
+                        To'lovga o'tish
+                    </button>
+                    <a href="products.html" class="btn btn-continue-shopping">
+                        Xaridni davom ettirish
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <div class="toast-container" id="toastContainer"></div>
+</body>
+</html>

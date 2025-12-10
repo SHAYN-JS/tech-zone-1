@@ -1,0 +1,172 @@
+/* === product-simple.css === */
+/* Faqat savatga qo'shish uchun sodda va chiroyli sahifa */
+
+.simple-header {
+    background: var(--secondary);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.product-simple-page {
+    padding: 120px 20px 80px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+}
+
+.product-simple-card {
+    background: var(--secondary);
+    border-radius: 24px;
+    padding: 40px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    border: 1px solid var(--border);
+}
+
+.product-img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    background: #1a1a1a;
+}
+
+.product-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text);
+    line-height: 1.3;
+}
+
+.price-info {
+    margin: 25px 0;
+}
+
+.price-old {
+    font-size: 22px;
+    color: var(--text-secondary);
+    text-decoration: line-through;
+    margin-bottom: 8px;
+}
+
+.price-current {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.discount-badge {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.qty-btn {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #3a3a3a;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s;
+}
+
+.qty-btn:hover {
+    background: var(--accent);
+    transform: scale(1.1);
+}
+
+#quantity {
+    width: 120px;
+    height: 64px;
+    text-align: center;
+    background: #3a3a3a;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.btn-add-to-cart,
+.btn-buy-now {
+    padding: 18px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 16px;
+    transition: all 0.3s;
+}
+
+.btn-add-to-cart {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-buy-now {
+    background: transparent;
+    border: 3px solid var(--accent);
+    color: var(--accent);
+}
+
+.btn-buy-now:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.back-link {
+    display: block;
+    margin-top: 30px;
+    color: var(--text-secondary);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
+/* Mobil */
+@media (max-width: 576px) {
+    .product-simple-card {
+        padding: 30px 20px;
+        border-radius: 16px;
+    }
+    .product-title { font-size: 24px; }
+    .price-current { font-size: 36px; }
+    .quantity-selector { gap: 15px; }
+    .qty-btn { width: 56px; height: 56px; font-size: 28px; }
+    #quantity { width: 100px; height: 56px; font-size: 24px; }
+}
